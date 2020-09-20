@@ -57,8 +57,8 @@ nav ul li:hover {
 
 .container {
   border-style: dotted;
-  padding: 0 2vw;
-  margin: 1vh auto;
+  padding: 0 2rem;
+  margin: 1rem auto;
   width: 60vw;
 }
 
@@ -68,6 +68,14 @@ nav ul li:hover {
 
 .container section {
   display: block;
+}
+
+.container section > * + * {
+  margin-top: 1rem;
+}
+
+.container section:last-child {
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {
