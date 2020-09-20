@@ -21,10 +21,13 @@ body {
   padding: 2rem;
   font-size: 2rem;
   font-family: "Open Sans", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #fafafa;
 }
 
 li {
   list-style: none;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 nav ul {
@@ -47,11 +50,20 @@ nav ul li:first-child {
   margin-right: auto;
 }
 
+nav ul li:hover {
+  cursor: pointer;
+  color: #0085A8;
+}
+
 .container {
   border-style: dotted;
   padding: 0 2vw;
-  margin: 0 auto;
+  margin: 1vh auto;
   width: 60vw;
+}
+
+.container > * + * {
+  margin-top: 5rem;
 }
 
 .container section {
@@ -66,16 +78,8 @@ nav ul li:first-child {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #121212;
-    color: whitesmoke;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 31.25%;
-  }
+.container p {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
