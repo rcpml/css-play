@@ -1,0 +1,145 @@
+//COlORS
+$black-primary: #121212;
+
+$black-primary-light: #534e50;
+
+$black-primary-text: #292929;
+
+
+$red-primary: #FF6961;
+
+$red-primary-dark: #E3504B;
+
+
+$blue-primary: #02b8d8;
+
+$blue-primary-dark: #0085A8;
+
+
+$green-primary: #4ce64c;
+
+$green-primary-dark: #43AB49;
+
+
+$yellow-primary: #fbff00;
+
+$yellow-primary-dark: #F5BB00;
+
+
+$orange-primary: #ff6337;
+
+$orange-primary-dark: #df4d19;
+
+
+$purple-primary: #9b59b6;
+
+$purple-primary-dark: #8e44ad;
+
+
+$pink-primary: #e84393;
+
+$pink-primary-light: #fd79a8;
+
+
+// MEDIA QUERY MIXIN
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+      @media (max-width: 600px) { @content };
+    }
+    @if $breakpoint == tab-port {
+      @media (max-width: 900px) { @content };
+    }
+    @if $breakpoint == tab-land {
+      @media (max-width: 1200px) { @content };
+    }
+    @if $breakpoint == big-desktop {
+      @media (min-width: 1800px) { @content }
+    }
+  }
+  
+  @mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+ box-sizing: border-box;
+ min-height: 100vh;
+ padding: 2rem;
+ font-size: 2rem;
+ font-family: "Open Sans", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    li:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    li:first-child {
+        margin-right: auto;
+    }
+}
+
+.container {
+  border-style: dotted;
+  padding: 0 2vw;
+  margin: 0 auto;
+  width: 60vw;
+
+  section {
+    display: block;
+  }
+
+  @include respond(phone) {
+    margin-top: 1vh;
+    padding: 1vh 2vw;
+    min-width: 80vw;
+  }
+
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $black-primary;
+    color: whitesmoke;
+  }
+}
+
+
+@include respond(phone) {
+  body {
+    font-size: 31.25%;
+  }
+}
+
+@include respond(tab-port) {
+  body {
+    // font-size: 46.875%;
+  }
+}
